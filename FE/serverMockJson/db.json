@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "description": "High-quality wireless headphones with noise cancellation",
+      "price": 199.99,
+      "category": "electronics",
+      "stock": 15,
+      "image": "https://via.placeholder.com/200?text=Wireless+Headphones"
+    },
+    {
+      "id": 2,
+      "name": "USB-C Cable",
+      "description": "Durable USB-C charging cable, 2 meters",
+      "price": 12.99,
+      "category": "accessories",
+      "stock": 50,
+      "image": "https://via.placeholder.com/200?text=USB-C+Cable"
+    },
+    {
+      "id": 3,
+      "name": "Laptop Stand",
+      "description": "Adjustable aluminum laptop stand for better ergonomics",
+      "price": 39.99,
+      "category": "office",
+      "stock": 25,
+      "image": "https://via.placeholder.com/200?text=Laptop+Stand"
+    },
+    {
+      "id": 4,
+      "name": "Mechanical Keyboard",
+      "description": "RGB mechanical keyboard with cherry mx switches",
+      "price": 149.99,
+      "category": "electronics",
+      "stock": 10,
+      "image": "https://via.placeholder.com/200?text=Mechanical+Keyboard"
+    },
+    {
+      "id": 5,
+      "name": "Wireless Mouse",
+      "description": "Ergonomic wireless mouse with 2.4GHz connection",
+      "price": 34.99,
+      "category": "accessories",
+      "stock": 30,
+      "image": "https://via.placeholder.com/200?text=Wireless+Mouse"
+    },
+    {
+      "id": 6,
+      "name": "Monitor Lamp",
+      "description": "LED clip-on monitor lamp with USB power",
+      "price": 24.99,
+      "category": "office",
+      "stock": 20,
+      "image": "https://via.placeholder.com/200?text=Monitor+Lamp"
+    },
+    {
+      "id": 7,
+      "name": "Phone Stand",
+      "description": "Adjustable phone stand for desk, supports all sizes",
+      "price": 16.99,
+      "category": "accessories",
+      "stock": 40,
+      "image": "https://via.placeholder.com/200?text=Phone+Stand"
+    },
+    {
+      "id": 8,
+      "name": "Desktop Microphone",
+      "description": "USB desktop microphone with built-in mute button",
+      "price": 79.99,
+      "category": "electronics",
+      "stock": 8,
+      "image": "https://via.placeholder.com/200?text=Desktop+Microphone"
+    }
+  ]
+}
