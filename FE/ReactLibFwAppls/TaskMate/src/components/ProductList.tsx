@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
+import './productList.css'
 
 export default function ProductList() {
 
   const [products, setProducts] = React.useState<string[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:8300/products?stock=15")
+    fetch("http://localhost:8300/products")
       .then(response => response.json())
       .then(data => {
         setProducts(data);
@@ -21,6 +22,23 @@ export default function ProductList() {
   }, [products]);
 
   return (
-    <div>ProductList</div>
+    <div>ProductList
+
+
+      <section>
+        {
+          products.map(p => {
+            return <div className='card' key={p.id}>
+              <p>{p.name}</p>
+              <p>
+                <span>{p.price}</span>
+                <span>{p.in_stock}</span>
+              </p>
+            </div>
+          })
+        }
+        
+      </section>
+    </div>
   )
 }
