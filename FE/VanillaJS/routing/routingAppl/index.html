@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla JS SPA</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        nav { margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        nav a { margin-right: 15px; text-decoration: none; color: blue; font-weight: bold; }
+        #main-page { padding: 20px; border: 1px dashed #aaa; border-radius: 8px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" onclick="route(event)">Home</a>
+        <a href="/about" onclick="route(event)">About</a>
+        <a href="/lorem" onclick="route(event)">Lorem</a>
+        <a href="/this-page-doesnt-exist" onclick="route(event)">Broken Link</a>
+    </nav>
+
+    <main id="main-page">
+        <h2>Loading...</h2>
+    </main>
+
+    <script src="router.js"></script>
+</body>
+</html>
