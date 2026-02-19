@@ -23,7 +23,8 @@ export default function ProductList() {
   }, [products]);
 
   return (
-    <div>ProductList
+    <div>
+      ProductList
         <button type="button" onClick={() => setUrl("http://localhost:8300/products?in_stock=true")}>In Stock Only</button>
         <button type="button" onClick={() => setUrl("http://localhost:8300/products")}>All</button>
 

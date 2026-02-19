@@ -25,5 +25,26 @@
     </main>
 
     <script src="router.js"></script>
+    <script>
+        window.addEventListener('popstate', (event) => {
+  console.log("Location: " + document.location + ", state: " + JSON.stringify(event.state));
+  
+//   if (event.state && event.state.page === 'gallery') {
+//     renderGallery(); // Update your UI based on the state
+//   }
+});
+
+navigation.addEventListener('navigate', (event) => {
+  console.log('User is going to:', event.destination.url);
+  // You can intercept the navigation here!
+  if (event.canIntercept) {
+    event.intercept({
+      handler() {
+        console.log('Navigating smoothly...');
+      }
+    });
+  }
+});
+    </script>
 </body>
 </html>

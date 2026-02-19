@@ -1,17 +1,23 @@
+import { BrowserRouter } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
+
 import './RootComp.css'
 import Header from './components/Header'
 import ProductList from './components/ProductList';
+import Home from './components/Home';
 
 const RootComp = () => {
     return (
-        <div className="rootcomp">
-            <Header />
-            <h5>{import.meta.env.DEV ? '🔧 DEV MODE' : '🚀 PROD MODE'}</h5>
-            Welcome to react Applications
+        <>
+            <Routes>
+                <Route path="/" element={<Home></Home>} />
+                <Route path="/about" element={<div>About Page</div>} />
+                <Route path="/contact" element={<div>Contact Page</div>} />
+                <Route path="/products" element={<ProductList></ProductList>} />
+            </Routes>
+            
+        </>
 
-
-            <ProductList />
-        </div>
     );
 
 };
