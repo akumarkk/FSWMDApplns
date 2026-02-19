@@ -9,20 +9,19 @@ import Footer from './components/Footer';
 
 const RootComp = () => {
     return (
-        <>
-        <Header></Header>
-            <Routes>
-                <Route path="/" element={<Home></Home>} />
-                <Route path="/about" element={<div>About Page</div>} />
-                <Route path="/contact" element={<div>Contact Page</div>} />
-                <Route path="/products" element={<ProductList></ProductList>} />
-            </Routes>
+        <div className="rootcomp">
+            <Header></Header>
+            <main className="main-content">
+                <Routes>
+                    <Route path="/" element={<Home></Home>} />
+                    <Route path="/about" element={<div>About Page</div>} />
+                    <Route path="/contact" element={<div>Contact Page</div>} />
+                    <Route path="/products" element={<ProductList></ProductList>} />
+                </Routes>
+            </main>
             <Footer></Footer>
-            
-        </>
-
+        </div>
     );
-
 };
 
 export default RootComp;
