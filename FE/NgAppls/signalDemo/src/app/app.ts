@@ -1,4 +1,4 @@
-import { Component, signal, OnInit, OnDestroy } from '@angular/core';
+import { Component, signal, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { interval, Subscription } from 'rxjs';
 
@@ -14,10 +14,14 @@ export class App  implements OnInit, OnDestroy {
 
   private timerSubscription?: Subscription;
 
+  constructor(private cdr: ChangeDetectorRef) {}
+
   ngOnInit() {
     // interval(1000) emits a value every 1000ms (1 second)
     this.timerSubscription = interval(1000).subscribe((val) => {
       this.counter = val;
+      this.cdr.detectChanges();
+
     });
   }
 
