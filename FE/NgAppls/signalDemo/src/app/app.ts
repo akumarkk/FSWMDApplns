@@ -8,9 +8,9 @@ import { interval, Subscription } from 'rxjs';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class App  implements OnInit, OnDestroy {
   protected readonly title = signal('signalDemo');
-  private counter = 0;
+  counter = 0;
 
   private timerSubscription?: Subscription;
 
