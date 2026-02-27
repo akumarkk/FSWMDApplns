@@ -20,7 +20,7 @@ export class App  implements OnInit, OnDestroy {
     // interval(1000) emits a value every 1000ms (1 second)
     this.timerSubscription = interval(1000).subscribe((val) => {
       this.counter = val;
-      this.cdr.detectChanges();
+      // this.cdr.detectChanges();
 
     });
   }
