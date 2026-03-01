@@ -13,6 +13,8 @@ export function List() {
     const listArr = useState(initList);
     const [list, setList] = listArr;
 
+    const [editable, setEditable] = useState(false);
+
     const removeHigherCalorieItem = () => {
         const newList = list.filter(item => item.calorie <= 100);
         setList(newList);
@@ -24,6 +26,10 @@ export function List() {
         
     }
 
+    const handleItemDoubleClick = (index) => {
+        setEditable(true);
+    }
+
     return (
         <div>
             <header>
@@ -32,7 +38,7 @@ export function List() {
                 </h2>
                 {
                     list.map((item, index) => {
-                        return <Item item={item} key={`item-${index}`} onClick={() => handleItemRemove(index)}></Item>
+                        return <Item item={item} key={`item-${index}`} editable={editable} onClick={() => handleItemRemove(index)} onDoubleClick={() => handleItemDoubleClick(index)}></Item>
                     })
                 }
 
