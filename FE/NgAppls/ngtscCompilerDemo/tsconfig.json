@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "es2020",
+    "target": "es2020",
+    "lib": ["dom", "es2020"],
+    "moduleResolution": "bundler",
+    "experimentalDecorators": true,
+    "declaration": true
+  },
+  "angularCompilerOptions": {
+    "enableIvy": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  },
+  "files": ["user.component.ts"]
+}
