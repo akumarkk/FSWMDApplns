@@ -13,6 +13,7 @@ export function List() {
                 <h2>
                     Grocery List
                 </h2>
+                <Item></Item>
             </header>
         </div>
     );
