@@ -18,6 +18,12 @@ export function List() {
         setList(newList);
     }
 
+    const handleItemRemove = (index) => {
+        const newList = list.filter((_, i) => i !== index);
+        setList(newList);
+        
+    }
+
     return (
         <div>
             <header>
@@ -26,7 +32,7 @@ export function List() {
                 </h2>
                 {
                     list.map((item, index) => {
-                        return <Item item={item} key={`item-${index}`}></Item>
+                        return <Item item={item} key={`item-${index}`} onClick={() => handleItemRemove(index)}></Item>
                     })
                 }
 
